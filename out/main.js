@@ -1,11 +1,5 @@
-// import http = require('http');
-// var port = process.env.port || 1337;
-// http.createServer(function (req, res) {
-//     res.writeHead(200, { 'Content-Type': 'text/plain' });
-//     res.end('Hello World\n');
-// }).listen(port);
-// console.log("你好！");
-// console.log(`Server Started! Please visit http://127.0.0.1:${port}`);
+"use strict";
+//typescript常用类型
 var var1 = false;
 var orderNumber = 10;
 // var name:string = "mark";
@@ -26,6 +20,56 @@ var Color2;
 })(Color2 || (Color2 = {}));
 ;
 var c2 = Color2.Green;
-console.log(c2);
+// console.log(c2);
 var notSore = 4;
+var ColorList = ["Red", "Greed", "Yellow"];
+var testList = function () {
+};
+var getUserInfo = function (user) {
+    return user.name + "==" + user.age;
+};
+var createSquare = function (square) {
+    var newSquare = { color: "red", area: 100 };
+    if (square.color) {
+        newSquare.color = square.color;
+    }
+    if (square.width) {
+        newSquare.area = newSquare.area * square.width;
+    }
+    return newSquare;
+};
+var square1 = createSquare({ color: "yellow", width: 20 });
+var mySearch;
+mySearch = function (source, substring) {
+    var result = source.search(substring);
+    if (result == -1) {
+        return false;
+    }
+    else {
+        return true;
+    }
+};
+var str1 = "this is ok";
+var substring1 = "ok";
+var substring2 = "not";
+var myArray;
+myArray = ["Bob", "Fred", 123];
+var list = ["a", "b", "c"];
+myArray.forEach(function (element) {
+    // console.log(element);
+});
+var Clock = (function () {
+    function Clock(h, m) {
+        this.getDate = function () {
+            return this.currentTime;
+        };
+        this.currentTime = h + '${h}:${m}';
+    }
+    return Clock;
+}());
+var cs = Clock;
+var newClock = new cs(7, 30);
+console.log(newClock.getDate());
+var $ = require('jquery');
+$.alert();
 //# sourceMappingURL=main.js.map
